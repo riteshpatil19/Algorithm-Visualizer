@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Searching Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="../cssfolder/searching.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Algorithm Visualizer</h1>
+    <span>Play with algorithms in real time</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- LEFT: Controls -->
+  <aside class="panel">
+    <h2>Controls</h2>
+
+    <!-- SELECT SEARCH ALGORITHM -->
+    <div class="panel-section">
+      <label for="algorithmSelect">Searching Algorithm</label>
+      <select id="algorithmSelect">
+        <option value="linear">Linear Search</option>
+        <option value="binary">Binary Search</option>
+      </select>
+    </div>
+
+    <!-- ARRAY SIZE -->
+    <div class="panel-section">
+      <label for="sizeRange">Array Size</label>
+      <input type="range" id="sizeRange" min="10" max="60" value="30">
+      <div class="range-value">
+        Size: <span id="sizeValue">30</span>
+      </div>
+    </div>
+
+    <!-- SEARCH VALUE -->
+    <div class="panel-section">
+      <label for="searchInput">Search Value</label>
+      <input type="number" id="searchInput" placeholder="Enter value (10-100)">
+    </div>
+
+    <!-- SPEED -->
+    <div class="panel-section">
+      <label for="speedRange">Speed</label>
+      <input type="range" id="speedRange" min="10" max="300" value="70">
+      <div class="range-value">
+        Delay: <span id="speedValue">70</span> ms
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <button id="generateBtn">Generate</button>
+      <button id="startBtn">Search</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </aside>
+
+  <!-- RIGHT: Visualization -->
+  <section class="visualizer-wrapper">
+    <div class="visualizer-header">
+      <span>Algorithm: <strong id="currentAlgoLabel">Linear Search</strong></span>
+      <span>Status: <strong id="statusLabel">Idle</strong></span>
+    </div>
+
+    <div class="visualizer">
+      <div id="bars"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <button id="backBtn" class="back-left">⬅ Back</button>
+  Built with HTML, CSS & JS – Searching Visualizer
+</footer>
+
+<!-- JS LINK -->
+<script src="../jsfolder/searching.js"></script>
+
+</body>
+</html>

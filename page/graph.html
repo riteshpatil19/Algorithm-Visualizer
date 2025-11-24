@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Graph Algorithm Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="../cssfolder/graph.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Graph Algorithm Visualizer</h1>
+    <span>Play with graph algorithms in real time</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- LEFT: Controls -->
+  <aside class="panel">
+    <h2>Controls</h2>
+
+    <!-- Algorithm Selection -->
+    <div class="panel-section">
+      <label for="algorithmSelect">Algorithm</label>
+      <select id="algorithmSelect">
+        <option value="bfs">Breadth First Search (BFS)</option>
+        <option value="dfs">Depth First Search (DFS)</option>
+        <option value="dijkstra">Dijkstra's Algorithm</option>
+        <option value="astar">A* Algorithm</option>
+      </select>
+    </div>
+
+    <!-- Nodes -->
+    <div class="panel-section">
+      <label for="nodeRange">Number of Nodes</label>
+      <input type="range" id="nodeRange" min="5" max="50" value="15">
+      <div class="range-value">
+        Nodes: <span id="nodeValue">15</span>
+      </div>
+    </div>
+
+    <!-- Speed -->
+    <div class="panel-section">
+      <label for="speedRange">Speed</label>
+      <input type="range" id="speedRange" min="10" max="200" value="70">
+      <div class="range-value">
+        Delay: <span id="speedValue">70</span> ms
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="generateGraphBtn">Generate Graph</button>
+      <button id="startBtn">Start</button>
+      <button id="resetBtn">Reset</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </aside>
+
+  <!-- RIGHT: Visualization -->
+  <section class="visualizer-wrapper">
+    <div class="visualizer-header">
+      <span>Algorithm: <strong id="currentAlgoLabel">BFS</strong></span>
+      <span>Status: <strong id="statusLabel">Idle</strong></span>
+    </div>
+
+    <div class="visualizer">
+      <!-- Graph area -->
+      <svg id="graphArea" width="100%" height="500px"></svg>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <button id="backBtn" class="back-left">⬅ Back</button>
+  Built with HTML, CSS & JS – Graph Visualizer
+</footer>
+
+<!-- JS LINK -->
+<script src="../jsfolder/graph.js"></script>
+
+</body>
+</html>

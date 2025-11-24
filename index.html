@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Algorithm Visualizer - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <div class="logo">🧠📊</div>
+    <h1>Algorithm Visualizer</h1>
+    <p>Understand algorithms through live animations</p>
+  </header>
+
+  <main>
+
+    <!-- ============ GUIDELINES / MESSAGE ============ -->
+    <section class="info-box">
+      <h2>📌 How to Use</h2>
+      <ul>
+        <li>Select an algorithm category (Sorting, Graph, Searching, etc.)</li>
+        <li>Click on its ticket (card) to open the visualizer</li>
+        <li>Adjust size & speed and press Start</li>
+        <li>Observe how the algorithm works step-by-step</li>
+      </ul>
+    </section>
+
+    <!-- ============ ALGORITHM TYPE TICKETS ============ -->
+    <section class="cards-section">
+      <h2>🚀 Algorithm Types</h2>
+
+      <div class="grid">
+
+        <div class="card" onclick="openPage('page/sorting.html')">
+          <div class="icon">📶</div>
+          <h3>Sorting Algorithms</h3>
+          <p>Bubble, Selection, Insertion, Quick & Merge sort.</p>
+          <span>Click to open</span>
+        </div>
+
+        <div class="card" onclick="openPage('page/searching.html')">
+          <div class="icon">🔍</div>
+          <h3>Searching Algorithms</h3>
+          <p>Linear Search, Binary Search visualization.</p>
+          <span>Click to open</span>
+        </div>
+
+        <div class="card" onclick="openPage('page/graph.html')">
+          <div class="icon">🗺️</div>
+          <h3>Graph Algorithms</h3>
+          <p>BFS, DFS, Dijkstra and path-finding</p>
+          <span>Click to open</span>
+        </div>
+
+        <div class="card" onclick="openPage('page/tree.html')">
+          <div class="icon">🌳</div>
+          <h3>Tree Algorithms</h3>
+          <p>Traversal: Inorder, Preorder, Postorder</p>
+          <span>Click to open</span>
+        </div>
+
+        <div class="card" onclick="openPage('page/dp.html')">
+          <div class="icon">🧮</div>
+          <h3>Dynamic Programming</h3>
+          <p>Fibonacci, Knapsack, LCS</p>
+          <span>Click to open</span>
+        </div>
+
+        <div class="card" onclick="openPage('page/backtracking.html')">
+          <div class="icon">♟️</div>
+          <h3>Backtracking</h3>
+          <p>N-Queen, Sudoku & Maze solving</p>
+          <span>Click to open</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Made with ❤️ using HTML, CSS & JS – Algorithm Visualizer Project
+  </footer>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

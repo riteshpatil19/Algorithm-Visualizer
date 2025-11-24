@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Algorithm Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="../cssfolder/sorting.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Algorithm Visualizer</h1>
+    <span>Play with algorithms in real time</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- LEFT: Controls -->
+  <aside class="panel">
+    <h2>Controls</h2>
+
+    <div class="panel-section">
+      <label for="algorithmSelect">Algorithm</label>
+      <select id="algorithmSelect">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="merge">Merge Sort</option>
+      </select>
+    </div>
+
+    <div class="panel-section">
+      <label for="sizeRange">Array Size</label>
+      <input type="range" id="sizeRange" min="10" max="100" value="40">
+      <div class="range-value">
+        Size: <span id="sizeValue">40</span>
+      </div>
+    </div>
+
+    <div class="panel-section">
+      <label for="speedRange">Speed</label>
+      <input type="range" id="speedRange" min="10" max="200" value="70">
+      <div class="range-value">
+        Delay: <span id="speedValue">70</span> ms
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="generateBtn">Generate</button>
+      <button id="startBtn">Start</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </aside>
+
+  <!-- RIGHT: Visualization -->
+  <section class="visualizer-wrapper">
+    <div class="visualizer-header">
+      <span>Algorithm: <strong id="currentAlgoLabel">Bubble Sort</strong></span>
+      <span>Status: <strong id="statusLabel">Idle</strong></span>
+    </div>
+
+    <div class="visualizer">
+      <div id="bars"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <button id="backBtn" class="back-left">⬅ Back</button>
+  Built with HTML, CSS & JS – Algorithm Visualizer
+</footer>
+
+<!-- JS LINK -->
+<script src="../jsfolder/sorting.js"></script>
+
+</body>
+</html>
