@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < boxes.length; i++) {
 
       if (!isSearching) return;
-
       boxes[i].classList.add("active");
       await sleep(speedRange.value);
 
