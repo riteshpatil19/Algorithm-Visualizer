@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentAlgoLabel = document.getElementById("currentAlgoLabel");
 
   let isSearching = false;
-
   console.log("✅ searching.js is connected");
 
   /* ========== SLEEP ========== */
